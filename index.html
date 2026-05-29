@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuo Yin</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #666;
+      --line: #e2e2e2;
+      --accent: #1a4f8b;
+      --maxw: 720px;
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Header */
+    header { display: flex; align-items: center; gap: 28px; margin-bottom: 8px; }
+    header img {
+      width: 110px; height: 110px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+      background: #f0f0f0;
+    }
+    h1 { font-size: 32px; margin: 0 0 4px; letter-spacing: 0.5px; }
+    .tagline { color: var(--muted); font-style: italic; margin: 0 0 6px; }
+    .contact { font-size: 15px; color: var(--muted); }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    /* Sections */
+    h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+      margin: 44px 0 18px;
+    }
+    .entry { margin-bottom: 20px; }
+    .entry .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .entry .role { font-weight: bold; }
+    .entry .date { color: var(--muted); font-size: 14px; font-style: italic; white-space: nowrap; }
+    .entry .detail { color: #333; margin-top: 2px; }
+    .entry .detail em { color: var(--muted); }
+
+    p.pub { margin: 0 0 16px; font-size: 16px; }
+    a.link { color: var(--accent); text-decoration: none; }
+    a.link:hover { text-decoration: underline; }
+
+    .intro { font-size: 18px; }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 540px) {
+      header { flex-direction: column; text-align: center; gap: 16px; }
+      .entry .top { flex-direction: column; }
+      .entry .date { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <!-- Replace photo.jpg with your own photo file uploaded to the repo. Delete this <img> line if you don't want a photo. -->
+      <img src="photo.jpg" alt="">
+      <div>
+        <h1>Tuo Yin</h1>
+        <p class="tagline">PhD Researcher — Medical AI &amp; Image Analysis</p>
+        <p class="contact">
+          Brussels, Belgium &nbsp;·&nbsp;
+          <a href="mailto:tuo.yin@ulb.be">tuo.yin@hubruxelles.be</a>
+        </p>
+      </div>
+    </header>
+
+    <p class="intro">
+      I am a PhD researcher in the Faculty of Medicine at the Université Libre de Bruxelles,
+      working at the intersection of artificial intelligence, medical image processing, and
+      software engineering. My research focuses on the development of artificial intelligence
+      algorithms to enhance the accuracy and efficiency of cancer diagnosis, treatment, and prognosis.
+    </p>
+
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">Université Libre de Bruxelles, Belgium</span>
+        <span class="date">Mar. 2024 – Present</span>
+      </div>
+      <div class="detail">
+        PhD student, Faculty of Medicine.
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">Tokyo Institute of Technology, Japan</span>
+        <span class="date">Sep. 2019 – Aug. 2021</span>
+      </div>
+      <div class="detail">
+        M.Eng. in Information and Communications Engineering.<br>
+        Master thesis on image-quality improvement in TOF-PET reconstruction using deep neural networks.
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">Dalian University of Technology, China</span>
+        <span class="date">Sep. 2014 – Jul. 2018</span>
+      </div>
+      <div class="detail">
+        B.Eng. in Software Engineering.
+      </div>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">Korea Advanced Institute of Science &amp; Technology, South Korea</span>
+        <span class="date">Sep. 2021 – Feb. 2024</span>
+      </div>
+      <div class="detail">
+        Researcher in Optical Imaging.
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">University of Tokyo, Japan</span>
+        <span class="date">Sep. 2018 – Aug. 2019</span>
+      </div>
+      <div class="detail">
+        Research student in Information and Communication Engineering.
+      </div>
+    </div>
+
+    <h2>Publications</h2>
+
+    <p class="pub">
+      <strong>Tuo Yin</strong>, F. Lifrange, Z. Denis, A. de Caluwé, L. Buisseret, X. Catteau,
+      C. Legros, N. Reynaert, J. Dhont. “Fully Automated Stain Quantification Framework for IHC
+      Whole Slide Images in Breast Cancer.” <em>Technology in Cancer Research &amp; Treatment</em>
+      25 (2026).
+      <a class="link" href="https://journals.sagepub.com/doi/10.1177/15330338251407734">[Link]</a>
+    </p>
+
+    <p class="pub">
+      <strong>Tuo Yin</strong>, T. Obi. “Generation of attenuation correction factors from
+      time-of-flight PET emission data using high-resolution residual U-net.”
+      <em>Biomedical Physics &amp; Engineering Express</em> 7.6 (2021): 065006.
+      <a class="link" href="https://iopscience.iop.org/article/10.1088/2057-1976/ac21aa">[Link]</a>
+    </p>
+
+    <p class="pub">
+      Z. Chen, G. Geng, X. Cui, <strong>Tuo Yin</strong>, F. Yin. “Bionic optimization algorithms
+      and their applications in signal processing.” <em>Journal of Data Acquisition and Processing</em>
+      33.4 (2018): 662–682.
+      <a class="link" href="http://sjcj.nuaa.edu.cn/html/2018/4/20180411.htm">[Link]</a>
+    </p>
+
+    <h2>Links &amp; Writing</h2>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">LinkedIn</span>
+      </div>
+      <div class="detail">
+        <a class="link" href="https://www.linkedin.com/in/tuo-yin-049a97195/">linkedin.com/in/tuo-yin</a>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="top">
+        <span class="role">Student Ambassador posts — Tokyo Institute of Technology</span>
+      </div>
+      <div class="detail">
+        Personal posts and reflections written as a Tokyo Tech student ambassador.
+        <a class="link" href="https://discover.titech.ac.jp/ambassador/tuo/">discover.titech.ac.jp/ambassador/tuo</a>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Tuo Yin · Last updated May 2026
+    </footer>
+
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
